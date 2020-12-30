@@ -5,7 +5,7 @@ Diese LEDs findest du entweder unter dem Namen [Neopixel](https://www.google.com
 ![Vorschau](https://github.com/macim0/sylvester-mini/blob/master/sylvester-mini.gif?raw=true)
 
 ## ~ @unplugged
-Jetzt musst du noch die Kabel an den Calliope anschließen. Dazu kannst du die Kabelenden durch die goldenen Löcher stecken und um den Kreis wicheln.<br>
+Jetzt musst du noch die Kabel an den Calliope anschließen. Dazu kannst du die Kabelenden durch die goldenen Löcher stecken und um den Kreis wickeln.<br>
 - plus(+5V), also das rote Kabel, an plus (+) vom Calliope anschließen, <br>
 - minus(GND), also das schwarze Kabel, an minus (-) vom Calliope anschließen, <br>
 - das gelbe Signalkabel (Din) an den Pin 1 (1) vom Calliope anschließen. <br>
@@ -21,7 +21,7 @@ let strip = neopixel.create(DigitalPin.P1, 6, NeoPixelMode.RGB)
 ``` 
 
 ## Schritt 2
-Für den Start müssen wir eine LED anschalten die später (im nächsten Schritt) bis zum Ende des Streifens durchläuft. Das ganze sollte sich dauerhaft wiederholen.<br>
+Für den Start müssen wir eine LED anschalten, die später (im nächsten Schritt) bis zum Ende des Streifens durchläuft. Das ganze sollte sich dauerhaft wiederholen.<br>
 Dazu habe ich die erste LED auf meinem Streifen Orange mit ``||neopixel.strip:setze Farbe von NeoPixel 0 auf rot||`` angeschalten. <br>
 **Hinweis:** Wenn du eine Veränderung am Neopixel anzeigen möchtest, brauchst du auch immer den Block ``||neopixel.strip:anzeigen||``.
 
@@ -34,7 +34,7 @@ basic.forever(function () {
 })
 ```
 ## Schritt 3
-Nun wollen wir die Rakete mal abheben lassen. Die LED muss sich also bewegen (auf dem Streifen verschieben). Um es bis zum Ende des Streifens zu schaffen benöten wir 6 Runden. <br>
+Nun wollen wir die Rakete mal abheben lassen. Die LED muss sich also bewegen (auf dem Streifen verschieben). Um es bis zum Ende des Streifens zu schaffen, benöten wir 6 Runden. <br>
 Um das zu machen benötigen wir zuerste eine Schleife ``||loops:index Schleife||``. In dieses Schleife kommen die Blöcke ``||basic:pausiere||``, ``||neopixel.strip:verschiebe||`` und ``||neopixel.strip:anzeigen||``. <br>
 Außerdem müssen wir die LED auf dem Calliope noch einmal kurz an und wieder ausschalten in dem wir ``||basic:setze RGB-LED-Farbe auf||`` auf Orange und nach einer Pause wieder auf Schwarz stellen. 
 
@@ -56,8 +56,8 @@ basic.forever(function () {
 ```
 
 ## Schritt 4
-Abschließend müssen wir noch das Feuerwerk auf dem Display anzeigen. Dies geht ganz einfach indem ihr es mit dem Block ``||basic:zeige LEDs||`` baut. <br>
-Außerdem kannst du die Explosion der Raktet noch mit einem Ton darstellen hierfür benötigst du den Block ``||music:spiele Note Mittleres C für 1 Schlag||``. <br>
+Abschließend müssen wir noch das Feuerwerk auf dem Display anzeigen. Dies geht ganz einfach, indem ihr es mit dem Block ``||basic:zeige LEDs||`` baut. <br>
+Außerdem kannst du die Explosion der Raktet noch mit einem Ton darstellen. Hierfür benötigst du den Block ``||music:spiele Note Mittleres C für 1 Schlag||``. <br>
 Nach Ende der Explosion solltest du alle LEDs auf dem Display ausschalten. Dies kannst du entweder mit einem leeren ``||basic:zeige LEDs||`` oder mit ``||basic:Bildschirm löschen||`` machen.<br>
 **Wenn du verschiedene Bilder hintereinander setzt, entsteht eine Animation.**
 
