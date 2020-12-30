@@ -1,7 +1,7 @@
-# Neopixel-Weihnachtsstern
+# Calliope-Tischfeuerwerk
 ## ~avatar avatar @unplugged
 Diesmal benötigst du einen Calliope mini und adressierbare RGB-LED's. <br>
-Diese LED's findest du entweder unter dem Namen [Neopixel](https://www.google.com/search?q=neopixel+band&rlz=1C1CHBD_deDE928DE928&oq=neopi&aqs=chrome.0.69i59l3j69i57j0j69i60l3.1887j0j9&sourceid=chrome&ie=UTF-8) oder [ws2812b](https://www.ebay.de/sch/i.html?_nkw=ws2812b&_dcat=116022&_sacat=-1&vbn_id=7005777392&LH_PrefLoc=1&_fsrp=1&_sop=15). Ich empfehle einfach ein ws2812b RGB-LED-Band von 5m Länge (damit kannst du viel anfangen)!
+Diese LED's findest du entweder unter dem Namen [Neopixel](https://www.google.com/search?q=neopixel+band&rlz=1C1CHBD_deDE928DE928&oq=neopi&aqs=chrome.0.69i59l3j69i57j0j69i60l3.1887j0j9&sourceid=chrome&ie=UTF-8) oder [ws2812b](https://www.ebay.de/sch/i.html?_nkw=ws2812b&_dcat=116022&_sacat=-1&vbn_id=7005777392&LH_PrefLoc=1&_fsrp=1&_sop=15). Ich empfehle einfach ein ws2812b RGB-LED-Band von 5m Länge (damit kannst du viel anfangen)! <br>
 ![Vorschau](https://github.com/macim0/sylvester-mini/blob/master/sylvester-mini.gif?raw=true)
 
 ## ~ @unplugged
