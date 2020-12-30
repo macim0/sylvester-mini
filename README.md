@@ -14,19 +14,18 @@ Jetzt musst du noch die Kabel an den Calliope anschließen. Dazu kannst du die K
 
 ## Schritt 1
 ``||basic: beim Start||`` musst du dem Calliope sagen, wo du die LED-Streifen angeschlossen hast. Erstelle dazu eine Variable ``||variables: strip||``.Speichere dies, indem du den Block ``||neopixel.strip:Neopixel at Pin P0 With 24 Leds||`` in den Block ``||variables: setze auf|`` schiebst. Hier stellst du ein, dass der Neopixel am Pin P1 angeschlossen ist und wie viele LED's du für deinen Raketenstart benutzt willst. <br>
-Das hintere Feld mit dem RGB-Format ist erstmal uninteressant (du brauchst es nur, sollten bei deinen LED's die Farben vertauscht sein, z.B. grün leuchten, aber rot programmiert sein) <br>
-Ich habe für den Startbereich 6 LED's benötigt.
+Das hintere Feld mit dem RGB-Format ist erstmal uninteressant (du brauchst es nur, sollten bei deinen LED's die Farben vertauscht sein, z.B. grün leuchten, aber rot programmiert sein). Ich habe für den Startbereich 6 LED's benötigt. <br>
+**Hinweis: Wenn die Töne stören, dann klickt auf der linken Seite unter dem Calliope auf den Lautsprecher, dann wird es stumm geschaltet.**
 ```blocks
 let strip = neopixel.create(DigitalPin.P1, 6, NeoPixelMode.RGB)
-
 ``` 
 
 ## Schritt 2
 Für den Start müssen wir eine LED anschalten die später (im nächsten Schritt) bis zum Ende des Streifens durchläuft. Das ganze sollte sich dauerhaft wiederholen.<br>
 Dazu habe ich die erste LED auf meinem Streifen Orange mit ``||neopixel.strip:setPixelColor||`` angeschalten. <br>
-**Hinweis:** Wenn du eine Veränderung am Neopixel anzeigen möchtest, brauchst du auch immer den Block ``||neopixel.strip:anzeigen||``
+**Hinweis:** Wenn du eine Veränderung am Neopixel anzeigen möchtest, brauchst du auch immer den Block ``||neopixel.strip:anzeigen||``.
 
-```block
+```blocks
 let strip = neopixel.create(DigitalPin.P1, 6, NeoPixelMode.RGB)
 
 basic.forever(function () {
@@ -60,7 +59,7 @@ basic.forever(function () {
 Abschließend müssen wir noch das Feuerwerk auf dem Display anzeigen. Dies geht ganz einfach indem ihr es mit dem Block ``||basic:showLeds||`` baut. <br>
 Außerdem kannst du die Explosion der Raktet noch mit einem Ton darstellen hierfür benötigst du den Block ``||music:playTone||``. <br>
 Nach Ende der Explosion solltest du alle LEDs auf dem Display ausschalten. Dies kannst du entweder mit einem leeren ``||basic:showLeds||`` oder mit ``||basic:clearScreen||`` machen.<br>
-**Wenn du verschiedene Bilder hintereinander setzt, entsteht eine Animation**
+**Wenn du verschiedene Bilder hintereinander setzt, entsteht eine Animation.**
 
 ```blocks
 let strip = neopixel.create(DigitalPin.P1, 6, NeoPixelMode.RGB)
