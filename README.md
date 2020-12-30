@@ -52,27 +52,6 @@ basic.forever(function () {
     }
 })
 ```
-## Schritt 3
-Nun wollen wir die Rakete mal abheben lassen. Die LED muss sich also bewegen (auf dem Streifen verschieben). Um es bis zum Ende des Streifens zu schaffen benöten wir 6 Runden. <br>
- ``||neopixel.strip:rotiere||``, den Block ``||basic:pausiere||`` und den Block ``||neopixel.strip:anzeigen||`` in die Dauerhaft-Schleife. <br>
-**Falls dir der Block zum "verschiebe" noch nicht angezeigt wird kannst du auf "Fertigstellen" klicken, in der folgenden Ansicht sind dieser und weitere Blöcke dann auch verfügbar.**
-
-```blocks
-let strip = neopixel.create(DigitalPin.P1, 6, NeoPixelMode.RGB)
-
-basic.forever(function () {
-    strip.setPixelColor(Index, neopixel.colors(NeoPixelColors.Orange))
-    strip.show()
-    for (let index = 0; index < 6; index++) {
-        basic.pause(200)
-        strip.shift(1)
-        strip.show()
-    }
-    basic.setLedColor(0xff8000)
-    basic.pause(200)
-    basic.setLedColor(0x000000)
-})
-```
 
 ## Schritt 4
 Abschließend müssen wir noch das Feuerwerk auf dem Display anzeigen. Dies geht ganz einfach indem ihr es mit dem Block ``||basic:showLeds||`` baut. <br>
